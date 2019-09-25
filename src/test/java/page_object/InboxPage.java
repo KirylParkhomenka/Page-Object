@@ -16,7 +16,7 @@ public class InboxPage extends Page {
 
     private static final By AGENT_LOCATOR = By.xpath("//span[@class='nwa-button-tab__nick']");
 
-    private Element isUserMailStringAfterLogin = new Element(USER_EMAIL_STRING_AFTER_LOGIN_LOCATOR);
+    private Element userMailStringAfterLogin = new Element(USER_EMAIL_STRING_AFTER_LOGIN_LOCATOR);
     private Element logoutLink = new Element(LOGOUT_LINK_LOCATOR);
 
     public InboxPage(WebDriver driver) {
@@ -26,7 +26,7 @@ public class InboxPage extends Page {
     public boolean isUserMailAfterLoginDisplayed() {
         webDriverWait.until(ExpectedConditions.elementToBeClickable
                 (driver.findElement(AGENT_LOCATOR)));
-        return isUserMailStringAfterLogin.isDisplayed();
+        return userMailStringAfterLogin.isDisplayed();
     }
 
     public HomePage logout() {

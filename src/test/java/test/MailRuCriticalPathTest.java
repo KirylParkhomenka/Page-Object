@@ -35,7 +35,7 @@ public class MailRuCriticalPathTest {
 
     @BeforeClass(description = "Start browser and initialize pages")
     public void setUpBefore() {
-        driver = Browser.getWrappedDriver(WebDriverTypes.FIREFOX);
+        driver = Browser.getWrappedDriver(WebDriverTypes.CHROME);
         driver.get(BASE_URL);
         composeMailPage = new ComposeMailPage(driver);
         draftPage = new DraftPage(driver);
